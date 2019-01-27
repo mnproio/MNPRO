@@ -1,0 +1,29 @@
+<!DOCTYPE RCC><RCC version="1.0">
+    <qresource prefix="/translations">
+        <file alias="bg">locale/mnpro_bg.qm</file>
+        <file alias="ca">locale/mnpro_ca.qm</file>
+        <file alias="cs">locale/mnpro_cs.qm</file>
+        <file alias="da">locale/mnpro_da.qm</file>
+        <file alias="de">locale/mnpro_de.qm</file>
+        <file alias="en">locale/mnpro_en.qm</file>
+        <file alias="en_US">locale/mnpro_en_US.qm</file>
+        <file alias="es">locale/mnpro_es.qm</file>
+        <file alias="fi">locale/mnpro_fi.qm</file>
+        <file alias="fr_FR">locale/mnpro_fr_FR.qm</file>
+        <file alias="it">locale/mnpro_it.qm</file>
+        <file alias="ja">locale/mnpro_ja.qm</file>
+        <file alias="ko_KR">locale/mnpro_ko_KR.qm</file>
+        <file alias="nl">locale/mnpro_nl.qm</file>
+        <file alias="pl">locale/mnpro_pl.qm</file>
+        <file alias="pt">locale/mnpro_pt.qm</file>
+        <file alias="pt_BR">locale/mnpro_pt_BR.qm</file>
+        <file alias="ro_RO">locale/mnpro_ro_RO.qm</file>
+        <file alias="ru">locale/mnpro_ru.qm</file>
+        <file alias="sk">locale/mnpro_sk.qm</file>
+        <file alias="sv">locale/mnpro_sv.qm</file>
+        <file alias="tr">locale/mnpro_tr.qm</file>
+        <file alias="uk">locale/mnpro_uk.qm</file>
+        <file alias="zh_CN">locale/mnpro_zh_CN.qm</file>
+        <file alias="zh_TW">locale/mnpro_zh_TW.qm</file>
+    </qresource>
+</RCC>

@@ -1,0 +1,26 @@
+[Unit]
+Description=MNPRO's distributed currency daemon
+After=network.target
+
+[Service]
+User=mnpro
+Group=mnpro
+
+Type=forking
+PIDFile=/var/lib/mnprod/mnprod.pid
+
+ExecStart=/usr/bin/mnprod -daemon -pid=/var/lib/mnprod/mnprod.pid \
+          -conf=/etc/mnpro/mnpro.conf -datadir=/var/lib/mnprod
+
+ExecStop=-/usr/bin/mnpro-cli -conf=/etc/mnpro/mnpro.conf \
+         -datadir=/var/lib/mnprod stop
+
+Restart=always
+PrivateTmp=true
+TimeoutStopSec=60s
+TimeoutStartSec=2s
+StartLimitInterval=120s
+StartLimitBurst=5
+
+[Install]
+WantedBy=multi-user.target
