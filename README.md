@@ -10,7 +10,7 @@ Premine: 500000
 
 ### Coin Specs
  
- ![alt text](http://104.238.177.207/mn_specific.png)
+ ![alt text](https://im.ezgif.com/tmp/ezgif-1-4e4ef1e7a040.png)
 
 
 ### Reward Distribution
