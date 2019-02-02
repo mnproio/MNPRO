@@ -15,4 +15,4 @@ Premine: 500000
 
 ### Reward Distribution
  
-![alt text](http://104.238.177.207/MN.png)
+![alt text](https://im.ezgif.com/tmp/ezgif-1-a7c6a0e6a187.png)
