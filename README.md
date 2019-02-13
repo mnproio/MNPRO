@@ -10,7 +10,7 @@ Premine: 500000
 
 ### Coin Specs
  
- ![alt text](http://i67.tinypic.com/2uyht78.png)
+ ![alt text](http://i66.tinypic.com/99mex1.png)
 
 
 ### Reward Distribution
