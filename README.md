@@ -15,4 +15,4 @@ Premine: 500000
 
 ### Reward Distribution
  
-![alt text](https://cdn.discordapp.com/attachments/535114847692521475/535120898416574474/discordrewardstructure.PNG)
+![alt text](http://i65.tinypic.com/66ggnn.png)
