@@ -10,7 +10,7 @@ Premine: 500000
 
 ### Coin Specs
  
- ![alt text](https://cdn.discordapp.com/attachments/535114622857117709/535120648373010433/discordcoininfo.PNG)
+ ![alt text](http://i67.tinypic.com/2uyht78.png)
 
 
 ### Reward Distribution
