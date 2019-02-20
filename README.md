@@ -5,7 +5,7 @@ Coin Ticker: MNPR
 
 Block Time: 1 min
 
-Total Supply: 500,000,000
+Total Supply: 50000000
 
 Premine: 500000
 
