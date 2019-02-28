@@ -160,6 +160,21 @@ public:
 		vSeeds.push_back(CDNSSeedData("95.179.131.223", "95.179.131.223"));
 		vSeeds.push_back(CDNSSeedData("217.69.9.93", "217.69.9.93"));
 		vSeeds.push_back(CDNSSeedData("104.238.177.207", "104.238.177.207"));
+		vSeeds.push_back(CDNSSeedData("209.250.243.131", "209.250.243.131"));         // Single node address
+		vSeeds.push_back(CDNSSeedData("209.250.241.176", "209.250.241.176"));         // Single node address
+		vSeeds.push_back(CDNSSeedData("45.77.239.108", "45.77.239.108"));             // Single node address
+		vSeeds.push_back(CDNSSeedData("107.191.44.102", "107.191.44.102"));           // Single node address
+		vSeeds.push_back(CDNSSeedData("45.32.235.211", "45.32.235.211"));             // Single node address
+		vSeeds.push_back(CDNSSeedData("108.61.188.67", "108.61.188.67"));             // Single node address
+		vSeeds.push_back(CDNSSeedData("108.61.95.114", "108.61.95.114"));             // Single node address
+		vSeeds.push_back(CDNSSeedData("45.77.193.238", "45.77.193.238"));             // Single node address
+		vSeeds.push_back(CDNSSeedData("45.32.133.67", "45.32.133.67"));               // Single node address
+		vSeeds.push_back(CDNSSeedData("108.160.134.29", "108.160.134.29"));           // Single node address
+		vSeeds.push_back(CDNSSeedData("207.148.86.107", " 207.148.86.107"));          // Single node address
+		vSeeds.push_back(CDNSSeedData("45.63.114.212", "45.63.114.212"));             // Single node address
+		vSeeds.push_back(CDNSSeedData("45.32.22.184", "45.32.22.184"));               // Single node address
+		vSeeds.push_back(CDNSSeedData("63.211.111.86", "63.211.111.86"));             // Single node address
+		vSeeds.push_back(CDNSSeedData("144.202.70.111", "144.202.70.111"));           // Single node address
 
         // MNPRO addresses start with 'G'
 		base58Prefixes[PUBKEY_ADDRESS] = std::vector<unsigned char>(1, 50);
@@ -187,7 +202,7 @@ public:
         fHeadersFirstSyncingActive = false;
 
         nPoolMaxTransactions = 2;
-        strSporkKey = "042326067dc59eb09290bc9c5552b9aea9bed5f1aa3edb3e03c9c94a4de68b3dad7f88531a067d05a5c4922994796388f9446df055b2a44265f4b6a4b75e32ef19";
+        strSporkKey = "04a56dbe05bed50b5d1ec673b4b308581984f702e3d0ddb78d681f6f5e33d48eee1c8e069948d19fde1e553ba7db88e38ce31e39d8d7a54b85ad61c8512f40abc3";
         strMasternodePoolDummyAddress = "MAKzgFX8EZt3fwzkPv55Q3sZJauPNdR8DQ";
         nStartMasternodePayments = genesis.nTime + 86400; // 24 hours after genesis creation
 
