@@ -54,26 +54,33 @@ static void convertSeed6(std::vector<CAddress>& vSeedsOut, const SeedSpec6* data
 // + Contains no strange transactions
 static Checkpoints::MapCheckpoints mapCheckpoints =
     boost::assign::map_list_of
-    (0, uint256("0x000005bb4206f97d00dd73fcc99243825eea703e1f170e10bbdf0dd2933325c5"))
-	(2, uint256("0x216d87c45867a0907c466ae137fb755ca43478de248411774076f3e599b2d4e4"))
-	(1000, uint256("0x0000014f6db585b8219880a79db41ff1d6e7b5383384aaa6e7858e4cde5d3c79"))
-	(4000, uint256("0x745a7fb30b5a8985e9ec7bd4a0b88d9cf6b121da6352ad55bb85c8f58cf61d09"))
-	(7000, uint256("0x198e4728f0ccd853ffbfbd7a7797a1c903320cf13f6c2385b126edd0336b13c7"))
-	(10000, uint256("0xe54729c00d43073a0ac94ad39cdb1c607bc968227f2a9a24d69edbee391df903"))
-	(13500, uint256("0xb6790ef9f660b52a823e82453b73f88fcc173d1c436a99a0900bedf8707d36af"))
-	(17800, uint256("0xed80e004469de6a9b74188523efa235172221d6960dacae5ec53c51aa97670aa"))
-	(23000, uint256("0x4ba7460a703f04c68dc9d3bf17f198d2ae594a7be73f01bde16e44d96361cb51"))
-	(27600, uint256("0x0675d936ad73138d9f2b7d726ac8f7ff3d18f34df76a7a74d8295df987d23228"))
-	(31000, uint256("0x77288ae6589398cc744ec91ef2f0f6531906cbfe8cdaa16de49d8ea22f7bce8d"))
-	(36000, uint256("0x0927f0f9687dc7f3b8620d2dd2f9124c994186447d32075ab10c9b49314dfcda"))
-	(38500, uint256("0xfedfad0393323abf54602011fe93c6a689441643ac46be94ce8ef99dbe808f07"))
-	(40764, uint256("0x7d119509ac1b2e827104365d532f386b1605b4412a497a3adc8e5cd39ca60386"));
+    (0, uint256("000005bb4206f97d00dd73fcc99243825eea703e1f170e10bbdf0dd2933325c5"))
+	(2, uint256("216d87c45867a0907c466ae137fb755ca43478de248411774076f3e599b2d4e4"))
+	(1000, uint256("0000014f6db585b8219880a79db41ff1d6e7b5383384aaa6e7858e4cde5d3c79"))
+	(4000, uint256("745a7fb30b5a8985e9ec7bd4a0b88d9cf6b121da6352ad55bb85c8f58cf61d09"))
+	(7000, uint256("198e4728f0ccd853ffbfbd7a7797a1c903320cf13f6c2385b126edd0336b13c7"))
+	(10000, uint256("e54729c00d43073a0ac94ad39cdb1c607bc968227f2a9a24d69edbee391df903"))
+	(13500, uint256("b6790ef9f660b52a823e82453b73f88fcc173d1c436a99a0900bedf8707d36af"))
+	(17800, uint256("ed80e004469de6a9b74188523efa235172221d6960dacae5ec53c51aa97670aa"))
+	(23000, uint256("4ba7460a703f04c68dc9d3bf17f198d2ae594a7be73f01bde16e44d96361cb51"))
+	(27600, uint256("0675d936ad73138d9f2b7d726ac8f7ff3d18f34df76a7a74d8295df987d23228"))
+	(31000, uint256("77288ae6589398cc744ec91ef2f0f6531906cbfe8cdaa16de49d8ea22f7bce8d"))
+	(36000, uint256("0927f0f9687dc7f3b8620d2dd2f9124c994186447d32075ab10c9b49314dfcda"))
+	(38500, uint256("fedfad0393323abf54602011fe93c6a689441643ac46be94ce8ef99dbe808f07"))
+	(40764, uint256("7d119509ac1b2e827104365d532f386b1605b4412a497a3adc8e5cd39ca60386"))
+	(50000, uint256("806c62ad3d5c9b6b94df7674463f0ffb1b767e142a186b8d3ed590e36265e0b9"))
+	(53000, uint256("5d8c68ce97430a9137ba85a81480d1dbcb4476aaa30f6336dc0b7df501b22c17"))
+	(55000, uint256("c2c052ce6908191d101162e61d0334070535fa72de0a69467eee0de393dc583b"))
+	(57000, uint256("3f0407d291179bd5d31d7f5ee071d6f7b3322d00b6b1305d1d159c468adb335d"))
+	(58098, uint256("c48883cb57e7887a17db68f9b6555f46dd6293c8d27ff775344a6e9497e56712"))
+	(58206, uint256("d0c99b9dbd721ff4f06d3946a733b628085b3efff461dbf50a2c36a54a33d68e"))
+	;
 	
 
 static const Checkpoints::CCheckpointData data = {
     &mapCheckpoints,
-	1546300800, // * UNIX timestamp of last checkpoint block
-    0,          // * total number of transactions between genesis and last checkpoint
+	1551722138, // * UNIX timestamp of last checkpoint block
+    116892,          // * total number of transactions between genesis and last checkpoint
                 //   (the tx=... number in the SetBestChain debug.log lines)
     2000        // * estimated number of transactions per day after checkpoint
 };
@@ -107,10 +114,10 @@ public:
          * The characters are rarely used upper ASCII, not valid as UTF-8, and produce
          * a large 4-byte int at any alignment.
          */
-        pchMessageStart[0] = 0xd4;
-        pchMessageStart[1] = 0x9e;
-        pchMessageStart[2] = 0xd3;
-        pchMessageStart[3] = 0xad;
+        pchMessageStart[0] = 0x26;
+        pchMessageStart[1] = 0xf3;
+        pchMessageStart[2] = 0xc9;
+        pchMessageStart[3] = 0xa3;
         vAlertPubKey = ParseHex("041e2029aed291046d4c7716c1f0698f9396aa7cd9a95ae1e6a463b8a36b6be7ee5b5471857edb0bbadd98c652f724988a83ab6791c15481b9757eb3e732c31ed6");
         nDefaultPort = 30229;
         bnProofOfWorkLimit = ~uint256(0) >> 1;
