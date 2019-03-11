@@ -39,6 +39,12 @@ public:
 public slots:
     void setBalance(const CAmount& balance, const CAmount& unconfirmedBalance, const CAmount& immatureBalance, const CAmount& watchOnlyBalance, const CAmount& watchUnconfBalance, const CAmount& watchImmatureBalance);
 
+    /** Set number of blocks shown in the UI */
+    void setNumBlocks(int count);
+
+    /** Set number of masternodes shown in the UI */
+    void setMasternodeCount(const QString& strMasternodes);
+    
 signals:
     void transactionClicked(const QModelIndex& index);
 

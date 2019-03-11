@@ -18,6 +18,9 @@
 #include "transactiontablemodel.h"
 #include "walletmodel.h"
 
+#include "chainparams.h"
+#include "main.h"
+
 #include <QAbstractItemDelegate>
 #include <QPainter>
 #include <QSettings>
@@ -171,9 +174,11 @@ void OverviewPage::setBalance(const CAmount& balance, const CAmount& unconfirmed
 
     // MNPR labels
     ui->labelBalance->setText(BitcoinUnits::floorHtmlWithUnit(nDisplayUnit, balance - immatureBalance, false, BitcoinUnits::separatorNever));
+    ui->labelBalance2->setText(BitcoinUnits::floorHtmlWithUnit(nDisplayUnit, balance - immatureBalance, false, BitcoinUnits::separatorNever));
     ui->labelUnconfirmed->setText(BitcoinUnits::floorHtmlWithUnit(nDisplayUnit, unconfirmedBalance, false, BitcoinUnits::separatorNever));
     ui->labelImmature->setText(BitcoinUnits::floorHtmlWithUnit(nDisplayUnit, immatureBalance, false, BitcoinUnits::separatorNever));
     ui->labelTotal->setText(BitcoinUnits::floorHtmlWithUnit(nDisplayUnit, balance + unconfirmedBalance, false, BitcoinUnits::separatorNever));
+    ui->labelTotal2->setText(BitcoinUnits::floorHtmlWithUnit(nDisplayUnit, balance + unconfirmedBalance, false, BitcoinUnits::separatorNever));
 
     // Watchonly labels
     ui->labelWatchAvailable->setText(BitcoinUnits::floorHtmlWithUnit(nDisplayUnit, watchOnlyBalance, false, BitcoinUnits::separatorNever));
@@ -212,9 +217,11 @@ void OverviewPage::updateWatchOnlyLabels(bool showWatchOnly)
         ui->labelWatchImmature->hide();
     } else {
         ui->labelBalance->setIndent(20);
+        ui->labelBalance2->setIndent(20);
         ui->labelUnconfirmed->setIndent(20);
         ui->labelImmature->setIndent(20);
         ui->labelTotal->setIndent(20);
+        ui->labelTotal2->setIndent(20);
     }
 }
 
@@ -225,6 +232,16 @@ void OverviewPage::setClientModel(ClientModel* model)
         // Show warning if this is a prerelease version
         connect(model, SIGNAL(alertsChanged(QString)), this, SLOT(updateAlerts(QString)));
         updateAlerts(model->getStatusBarWarnings());
+
+        setNumBlocks(model->getNumBlocks());
+        connect(model, SIGNAL(numBlocksChanged(int)), this, SLOT(setNumBlocks(int)));
+
+        setMasternodeCount(model->getMasternodeCountString());
+        connect(model, SIGNAL(strMasternodesChanged(QString)), this, SLOT(setMasternodeCount(QString)));
+
+        // Provide initial values
+        ui->clientVersion->setText(model->formatFullVersion());
+        ui->clientName->setText(model->clientName());
     }
 }
 
@@ -279,6 +296,17 @@ void OverviewPage::updateAlerts(const QString& warnings)
 {
     this->ui->labelAlerts->setVisible(!warnings.isEmpty());
     this->ui->labelAlerts->setText(warnings);
+}
+
+void OverviewPage::setNumBlocks(int count)
+{
+    ui->numberOfBlocks->setText(QString::number(count));
+
+}
+
+void OverviewPage::setMasternodeCount(const QString& strMasternodes)
+{
+    ui->masternodeCount->setText(strMasternodes);
 }
 
 void OverviewPage::showOutOfSyncWarning(bool fShow)
